@@ -165,14 +165,6 @@ To run the secure chat application, follow these steps:
     - **Disconnecting from the Server**:
       - The client sends a disconnect signal to the server, closes the connection, and exits the application.
 
-## Additional Notes
-
-- Ensure that all necessary dependencies are installed before running the application.
-- Verify that both the server and client scripts are executed in compatible environments to enable communication.
-- Clients must be connected to the same network as the server to establish communication.
-- The application provides a secure communication channel through RSA encryption, ensuring confidentiality and integrity of exchanged messages.
-## Additional Imp Notes
-- If there is empty without printed with enter operation number consider it as asking for operation 1-4.enter operation it will work properly.
 ## Server Features
 
 ### Client Connection Management
