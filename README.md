@@ -34,56 +34,6 @@ The application relies on several Python libraries for its functionality:
 - `PyQt5`: Used for building the client-side graphical user interface.
 - `os`: Used for file operations, such as listing available videos on the server.
 
-## Demo Instructions
-
-To run the secure chat application, follow these steps:
-
-1. **Server Setup**:
-    - Run `secure_chat_server.py` on a host machine accessible to clients.
-    - Provide the desired host and port information for the server to listen on.
-
-2. **Client Setup**:
-    - Run `secure_chat_client.py` on client machines intending to connect to the server.
-    - Upon execution, enter a unique username when prompted to identify the client.
-    - Use the provided menu options to interact with the server, including sending messages, requesting video streaming, and listing available videos.
-
-  3. **Usage**:
-    - **Sending Messages**: Enter `1` from the client menu, provide the recipient's username, and type the desired message to send encrypted messages to other clients.
-    - **Requesting Video Streaming**: Enter `3` from the client menu, provide the name of the video file to stream, and select the desired resolution if available.
-    - **Listing Available Videos**: Enter `2` from the client menu to view a list of videos available on the server.
-    - **Disconnecting from the Server**: Enter `4` from the client menu to gracefully disconnect from the server and exit the application.
-    1. **Sending Messages**:
-       - Enter `1` from the client menu.
-       - Provide the recipient's username and type the desired message to send encrypted messages to other clients.
-
-    2. **Listing Available Videos**:
-       - Enter `2` from the client menu to view a list of videos available on the server.
-
-    3. **Requesting Video Streaming**:
-       - Enter `3` from the client menu.
-       - Provide the name of the video file to stream.
-       - Select the desired resolution if available.
-
-    4. **Disconnecting from the Server**:
-       - Enter `4` from the client menu to gracefully disconnect from the server and exit the application.
-
-    #### Further Information:
-
-    - **Sending Messages**:
-      - The client encrypts the message with the recipient's public key and sends it to the server, which then broadcasts the encrypted message to all clients.
-
-    - **Listing Available Videos**:
-      - The client requests the server to list available videos.
-      - The server responds with a list of available video files, which the client can view.
-
-    - **Requesting Video Streaming**:
-      - The client requests the server to stream a video file.
-      - If the requested video file is available in multiple resolutions, the client selects the desired resolution.
-      - The server streams the video frames to the client, ensuring proportional sourcing from available resolutions.
-
-    - **Disconnecting from the Server**:
-      - The client sends a disconnect signal to the server, closes the connection, and exits the application.
-
 ## Additional Notes
 
 - Ensure that all necessary dependencies are installed before running the application.
@@ -163,17 +113,7 @@ The application consists of two main components:
 2. **Client**:
     - `secure_chat_client.py`: This file contains the implementation of the client. It connects to the server, sends and receives encrypted messages, requests video streaming, and displays the streamed videos.
 
-## Dependencies
 
-The application relies on several Python libraries for its functionality:
-
-- `socket`: Used for establishing network communication between the server and clients.
-- `threading`: Utilized for handling multiple client connections concurrently.
-- `pickle`: Utilized for serializing and deserializing Python objects.
-- `Crypto`: Provides cryptographic functions such as RSA encryption and decryption for secure communication.
-- `cv2` (OpenCV): Utilized for video streaming functionalities.
-- `PyQt5`: Used for building the client-side graphical user interface.
-- `os`: Used for file operations, such as listing available videos on the server.
 
 ## Demo Instructions
 
